@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SoundOff.Views.AboutPage"
+             xmlns:vm="clr-namespace:SoundOff.ViewModels"
+             Title="{Binding Title}">
+    
+    <ContentPage.BindingContext>
+        <vm:AboutViewModel />
+    </ContentPage.BindingContext>
+    
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Accent">black</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="300" />
+            <RowDefinition Height="210" />
+        </Grid.RowDefinitions>
+
+
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Label Grid.Row="0" Text="   Quick Help" FontAttributes="Bold" FontSize="Large"  Grid.ColumnSpan="4" Margin="0, 10, 0, 12"/>
+            <Image Source="breathe.png" Grid.Row="1" Grid.Column="0" Margin="5, 5, 0, 5"/>
+            <Image Source="sleep.png" Grid.Row="1" Grid.Column="1" Margin="5, 5, 0, 5"/>
+            <Image Source="anxiety.png" Grid.Row="1" Grid.Column="2" Margin="5, 5, 0, 5"/>
+            <Image Source="stress.png" Grid.Row="1" Grid.Column="3" Margin="5, 5, 0, 5"/>
+
+        </Grid>
+
+        <Grid Grid.Row="1">
+            
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Label Grid.Row="0" Text="   Daily Meditation" FontAttributes="Bold" FontSize="Large" />
+            <Image Source="snow.png" Grid.Row="1" Margin="0, 3, 0, 10" />
+        </Grid>
+
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Label Grid.Row="0" Text="   Daily Meditation" FontAttributes="Bold" FontSize="Large" Grid.ColumnSpan="2" />
+            <Image Source="cactuscard.png" Grid.Row="1"  Grid.Column="0" Margin="0, 0, 0, 0" />
+            <Image Source="arc.png" Grid.Row="1"  Grid.Column="1" Margin="0, 0, 0, 0" />
+            <Image Source="beach.png" Grid.Row="1"  Grid.Column="2" Margin="0, 0, 0, 0" />
+        </Grid>
+
+
+        
+
+    </Grid>
+
+</ContentPage>
